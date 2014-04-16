@@ -38,3 +38,13 @@ do
 done
 
 unset config_files
+
+alias nginx_stop='sudo nginx -s stop'
+alias nginx_start='sudo nginx'
+alias nginx_restart='nginx_stop && nginx_start'
+alias fpm_stop='sudo killall -c php-fpm'
+alias fpm_start='sudo php-fpm'
+alias fpm_restart='fpm_stop && fpm_start'
+alias web_stop='nginx_stop && fpm_stop'
+alias web_start='nginx_start && fpm_start'
+alias web_restart='nginx_restart && fpm_restart'
