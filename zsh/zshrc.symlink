@@ -39,6 +39,7 @@ done
 
 unset config_files
 
+# Web server aliases
 alias nginx_stop='sudo nginx -s stop'
 alias nginx_start='sudo nginx'
 alias nginx_restart='nginx_stop && nginx_start'
@@ -48,3 +49,38 @@ alias fpm_restart='fpm_stop && fpm_start'
 alias web_stop='nginx_stop && fpm_stop'
 alias web_start='nginx_start && fpm_start'
 alias web_restart='nginx_restart && fpm_restart'
+
+# Vagrant aliases
+alias v='vagrant'
+alias vs='vagrant suspend'
+alias vp='vagrant provision'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vss='vagrant ssh'
+alias vd='vagrant destroy'
+
+# Docker aliases
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=${HOME}/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+alias dclean="docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm"
+alias dps="docker ps"
+alias dr="docker run -it"
+alias drd="docker run -dit"
+alias db="docker build"
+alias ds="docker stop"
+alias dt="docker tag"
+alias dsall="docker ps | grep -v '^CONTAINER' | cut -d ' ' -f 1 | xargs docker stop"
+alias dp="docker push"
+
+# VirtualBox aliases
+alias vms='VBoxManage list runningvms'
+
+unsetopt correct_all
+unsetopt correct
+
+export BROWSER="/Applications/Google Chrome.app"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Cellar/ruby/2.1.1_1/bin:$PATH
+
+bindkey -e
