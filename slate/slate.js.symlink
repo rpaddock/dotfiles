@@ -5,7 +5,7 @@
 
 S.src('.reslate.js');
 // enable to see debug messages in Console.app
-// $.debug = true;
+//$.debug = true;
 
 slate.alias('hyper', 'ctrl;alt;cmd');
 
@@ -80,23 +80,23 @@ slate.bindAll({
         'return': $('center', 'center'),
         // throw to monitor
         '`': ['throw 0 resize',
-              'throw 1 resize'],
+              'throw 1 resize',
+              'throw 2 resize'],
         '1': $('toss', '0', 'resize'),
         '2': $('toss', '1', 'resize'),
         '3': $('toss', '2', 'resize'),
-        // direct focus 
-        d: $.focus('IntelliJ'),
-        c: $.focus('Google Chrome'),
+        // direct focus
+        q: $.focus('Messages'),
+        w: $.focus('HipChat'),
+        e: $.focus('Evernote'),
+        a: $.focus('Airmail'),
+        d: $.focus('IntelliJ IDEA'),
         s: $.focus('Sublime Text'),
+        f: $.focus('OmniFocus'),
+        c: $.focus('Google Chrome'),
         t: $.focus('Terminal'),
-        f: $.focus('Finder'),
-        e: $.focus('Sparrow'),
-        x: $.focus('1Password'),
-        p: $.focus('Spotify'),
-        k: $.focus('Skype'),
-        m: $.focus('Messages'),
-        a: $.focus('Mail'),
-        o: $.focus('OmniFocus'),
+        x: $.focus('1Password 4'),
+        
         // utility functions
         f1: 'relaunch',
         z: 'undo',
