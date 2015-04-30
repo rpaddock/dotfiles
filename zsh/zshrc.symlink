@@ -1,11 +1,20 @@
-# shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
-
-# your project folder that we can `c [tab]` to
+export ZSH=/Users/rpaddock/.oh-my-zsh
 export PROJECTS=~/Programming
 
-# use .localrc for SUPER SECRET CRAP that you don't
-# want in your public, versioned repo.
+ZSH_THEME="rpaddock"
+
+# CASE_SENSITIVE="true"
+# DISABLE_AUTO_UPDATE="true"
+# export UPDATE_ZSH_DAYS=13
+# DISABLE_LS_COLORS="true"
+# DISABLE_AUTO_TITLE="true"
+# ENABLE_CORRECTION="true"
+# COMPLETION_WAITING_DOTS="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# HIST_STAMPS="mm/dd/yyyy"
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
@@ -38,6 +47,22 @@ do
 done
 
 unset config_files
+
+plugins=(git)
+
+export PATH="/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# export LANG=en_US.UTF-8
+
+# export ARCHFLAGS="-arch x86_64"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+alias ls="ls -G"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Web server aliases
 alias nginx_stop='sudo nginx -s stop'
@@ -76,11 +101,21 @@ alias dp="docker push"
 # VirtualBox aliases
 alias vms='VBoxManage list runningvms'
 
+function tn() {
+    if [ -z "$1" ]; then;
+        session_name=$(basename `pwd`)
+    else
+        session_name=$1
+    fi
+    tmux new-session -s $session_name -n 'main'
+}
+
 unsetopt correct_all
 unsetopt correct
 
+export EDITOR='vim'
 export BROWSER="/Applications/Google Chrome.app"
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Cellar/ruby/2.1.1_1/bin:$PATH
 
 bindkey -e
+
