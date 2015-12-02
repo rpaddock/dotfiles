@@ -48,7 +48,7 @@ done
 
 unset config_files
 
-plugins=(git)
+plugins=(git aws)
 
 export PATH="/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -88,7 +88,6 @@ alias vd='vagrant destroy'
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=${HOME}/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
-alias dclean="docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm"
 alias dps="docker ps"
 alias dr="docker run -it"
 alias drd="docker run -dit"
@@ -97,17 +96,37 @@ alias ds="docker stop"
 alias dt="docker tag"
 alias dsall="docker ps | grep -v '^CONTAINER' | cut -d ' ' -f 1 | xargs docker stop"
 alias dp="docker push"
+alias drm="docker rm"
+
+function drmi() {
+  docker rmi `docker images --filter 'dangling=true' -q --no-trunc`
+}
+
+function drmall() {
+  docker rm `docker ps -aq --no-trunc --filter "status=exited"`
+}
 
 # VirtualBox aliases
 alias vms='VBoxManage list runningvms'
 
 function tn() {
-    if [ -z "$1" ]; then;
-        session_name=$(basename `pwd`)
-    else
-        session_name=$1
-    fi
-    tmux new-session -s $session_name -n 'main'
+  if [ -z "$1" ]; then;
+    session_name=$(basename `pwd`)
+  else
+    session_name=$1
+  fi
+  tmux new-session -s $session_name -n 'main'
+}
+
+# Show/Hide hidden files in finder
+function showall() {
+  defaults write com.apple.finder AppleShowAllFiles -bool YES
+  killall Finder
+}
+
+function hideall() {
+  defaults write com.apple.finder AppleShowAllFiles -bool NO
+  killall Finder
 }
 
 unsetopt correct_all

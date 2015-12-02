@@ -1,10 +1,17 @@
-set -g prefix C-a
+set -g prefix C-Space
 unbind-key C-b
-bind-key C-a send-prefix
+bind-key C-Space send-prefix
 
-set -g mode-mouse on
-set-option -g mouse-select-pane on
-set-option -g mouse-select-window on
+set-option -g -q mouse on
+
+bind-key -T root PPage if-shell -F "#{alternate_on}" "send-keys PPage" "copy-mode -e; send-keys PPage"
+bind-key -t vi-copy PPage page-up
+bind-key -t vi-copy NPage page-down
+
+bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
+bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
+bind-key -t vi-copy WheelUpPane halfpage-up
+bind-key -t vi-copy WheelDownPane halfpage-down
 
 # Smart pane switching with awareness of vim splits
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
@@ -15,13 +22,11 @@ bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
 bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 set -g default-terminal "screen-256color"
 
-set -g @tpm_plugins '              \
-  tmux-plugins/tpm                 \
-  tmux-plugins/tmux-sensible       \
-  tmux-plugins/tmux-copycat        \
-  tmux-plugins/tmux-yank           \
-  tmux-plugins/tmux-open           \
-  tmux-plugins/tmux-continuum      \
-'
+set -g @plugin tmux-plugins/tpm
+set -g @plugin tmux-plugins/tmux-sensible
+set -g @plugin tmux-plugins/tmux-copycat
+set -g @plugin tmux-plugins/tmux-yank
+set -g @plugin tmux-plugins/tmux-open
+set -g @plugin tmux-plugins/tmux-continuum
 
-run-shell '~/.tmux/plugins/tpm/tpm'
+run '~/.tmux/plugins/tpm/tpm'

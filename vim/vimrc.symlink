@@ -23,13 +23,9 @@ Plugin 'xolox/vim-easytags'
 call vundle#end()
 
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-set softtabstop=4
 set autoindent
 set cursorline
+set expandtab
 set foldenable
 set foldlevelstart=10
 set foldmethod=indent
@@ -41,8 +37,13 @@ set lazyredraw
 set linebreak
 set nomodeline
 set noshowmode
+set noswapfile
 set omnifunc=syntaxcomplete#Complete
+set shiftwidth=4
 set showmatch matchtime=3
+set smarttab
+set softtabstop=4
+set tabstop=4
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1

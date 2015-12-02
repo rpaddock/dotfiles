@@ -77,7 +77,7 @@ slate.bindAll({
         // centers
         u: $('center', 'top'),
         n: $('center', 'bottom'),
-        'return': $('center', 'center'),
+        'return': $('center', 'center', 'resize'),
         // throw to monitor
         '`': ['throw 0 resize',
               'throw 1 resize',
@@ -86,16 +86,16 @@ slate.bindAll({
         '2': $('toss', '1', 'resize'),
         '3': $('toss', '2', 'resize'),
         // direct focus
-        q: $.focus('Messages'),
-        w: $.focus('HipChat'),
-        e: $.focus('Evernote'),
+        q: $.focus('iTerm'),
+        w: $.focus('Google Chrome'),
+        e: $.focus('Messages'),
+        r: $.focus('HipChat'),
+        t: $.focus('Spotify'),
         a: $.focus('Airmail'),
-        d: $.focus('IntelliJ IDEA'),
         s: $.focus('Sublime Text'),
+        d: $.focus('IntelliJ IDEA'),
         f: $.focus('OmniFocus'),
-        c: $.focus('Google Chrome'),
-        t: $.focus('Terminal'),
-        x: $.focus('1Password 4'),
+        x: $.focus('Xcode'),
         
         // utility functions
         f1: 'relaunch',
