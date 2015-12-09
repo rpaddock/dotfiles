@@ -50,7 +50,7 @@ unset config_files
 
 plugins=(git aws)
 
-export PATH="/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
