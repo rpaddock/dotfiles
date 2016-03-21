@@ -50,7 +50,7 @@ unset config_files
 
 plugins=(git aws)
 
-export PATH="$(brew --prefix homebrew/php/php56)/bin:/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:/usr/local/Cellar/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/rpaddock/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,9 +85,6 @@ alias vss='vagrant ssh'
 alias vd='vagrant destroy'
 
 # Docker aliases
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=${HOME}/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
 alias dps="docker ps"
 alias dr="docker run -it"
 alias drd="docker run -dit"
@@ -97,11 +94,9 @@ alias dt="docker tag"
 alias dsall="docker ps | grep -v '^CONTAINER' | cut -d ' ' -f 1 | xargs docker stop"
 alias dp="docker push"
 alias drm="docker rm"
-
 function drmi() {
   docker rmi `docker images --filter 'dangling=true' -q --no-trunc`
 }
-
 function drmall() {
   docker rm `docker ps -aq --no-trunc --filter "status=exited"`
 }
@@ -109,6 +104,7 @@ function drmall() {
 # VirtualBox aliases
 alias vms='VBoxManage list runningvms'
 
+# Start new tmux session
 function tn() {
   if [ -z "$1" ]; then;
     session_name=$(basename `pwd`)
