@@ -86,7 +86,7 @@ slate.bindAll({
         '2': $('toss', '1', 'resize'),
         '3': $('toss', '2', 'resize'),
         // direct focus
-        q: $.focus('iTerm'),
+        q: $.focus('iTerm2'),
         w: $.focus('Google Chrome'),
         e: $.focus('Messages'),
         r: $.focus('HipChat'),
@@ -97,6 +97,7 @@ slate.bindAll({
         f: $.focus('OmniFocus'),
         g: $.focus('MacDown'),
         x: $.focus('Xcode'),
+        p: $.focus('Preview'),
         
         // utility functions
         f1: 'relaunch',
