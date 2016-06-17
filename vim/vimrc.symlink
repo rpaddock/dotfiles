@@ -13,7 +13,8 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-dispatch'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elzr/vim-json'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -45,6 +46,7 @@ set smarttab
 set softtabstop=4
 set tabstop=4
 
+let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'     " Show just the filename
