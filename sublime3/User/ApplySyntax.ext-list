@@ -1,0 +1,15 @@
+{
+	"HTML (Rails)":
+	[
+		"html.erb"
+	],
+	"JSON":
+	[
+		".bowerrc",
+		".csslintrc",
+		".eslintrc",
+		".jscsrc",
+		".jshintrc",
+		"geojson"
+	]
+}

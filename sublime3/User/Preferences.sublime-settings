@@ -1,5 +1,44 @@
 {
-  "font_size": 12.0,
-  "theme": "Soda Dark.sublime-theme",
-  "ensure_newline_at_eof_on_save": true
+	"bold_folder_labels": false,
+	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
+	"font_face": "Menlo",
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Boxy Theme Addon - Mono File Icons - Dark UI",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "enabled",
+	"save_on_focus_lost": false,
+	"tab_size": 4,
+	"theme": "Boxy Ocean.sublime-theme",
+	"theme_accent_cyan": true,
+	"theme_button_rounded": true,
+	"theme_find_panel_font_sm": true,
+	"theme_font_md": true,
+	"theme_icons_materialized": true,
+	"theme_sidebar_disclosure": true,
+	"theme_sidebar_highlight_text_only": true,
+	"theme_sidebar_indent_sm": true,
+	"theme_sidebar_indent_top_level_disabled": true,
+	"theme_size_md": true,
+	"theme_statusbar_colored": true,
+	"theme_tab_selected_filled": true,
+	"theme_tab_selected_underlined": true,
+	"translate_tabs_to_spaces": true,
+	"use_simple_full_screen": true,
+	"line_numbers": false,
+	"vintageous_use_ctrl_keys": true,
 }

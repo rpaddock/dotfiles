@@ -1,2 +1,6 @@
 [
+    { "keys": ["ctrl+h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+    { "keys": ["ctrl+j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+l"], "command": "travel_to_pane", "args": {"direction": "right"} },
 ]
