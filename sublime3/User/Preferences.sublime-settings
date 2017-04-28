@@ -18,6 +18,7 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"line_numbers": false,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"overlay_scroll_bars": "enabled",
@@ -39,6 +40,6 @@
 	"theme_tab_selected_underlined": true,
 	"translate_tabs_to_spaces": true,
 	"use_simple_full_screen": true,
-	"line_numbers": false,
 	"vintageous_use_ctrl_keys": true,
+	"create_new_pane_if_necessary": false,
 }

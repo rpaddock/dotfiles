@@ -1,0 +1,11 @@
+# ~/.tmuxinator/dev.yml
+
+name: dev
+root: ~/
+windows:
+  - editor:
+      layout: 373e,236x70,0,0[236x51,0,0,7,236x18,0,52{118x18,0,52,8,117x18,119,52,9}]
+      panes:
+        -
+        -
+        -

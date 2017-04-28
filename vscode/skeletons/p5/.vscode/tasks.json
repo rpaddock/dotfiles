@@ -1,0 +1,12 @@
+{
+    "taskName": "Run p5 script",
+    "suppressTaskName": true,
+    "isBuildCommand": true,
+    "command": "Chrome",
+    "osx": {
+        "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "args": [
+        "index.html"
+    ]
+}

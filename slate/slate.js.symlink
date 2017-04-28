@@ -92,7 +92,7 @@ slate.bindAll({
         r: $.focus('HipChat'),
         t: $.focus('Spotify'),
         a: $.focus('Airmail'),
-        s: $.focus('Sublime Text'),
+        s: $.focus('Code'),
         d: $.focus('IntelliJ IDEA'),
         f: $.focus('OmniFocus'),
         g: $.focus('MacDown'),
