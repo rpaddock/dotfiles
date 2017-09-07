@@ -20,6 +20,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'xolox/vim-misc'
+Plugin 'pbrisbin/vim-mkdir'
 call vundle#end()
 
 filetype plugin indent on

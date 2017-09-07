@@ -103,7 +103,7 @@ function tn() {
 unsetopt correct_all
 unsetopt correct
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export BROWSER="/Applications/Google Chrome.app"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
