@@ -21,6 +21,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
 filetype plugin indent on
