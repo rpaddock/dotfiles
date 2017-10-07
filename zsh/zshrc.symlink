@@ -86,7 +86,8 @@ unsetopt correct_all
 unsetopt correct
 
 export EDITOR='nvim'
-export BROWSER="/Applications/Google Chrome.app"
+export BROWSER='/Applications/Google Chrome.app'
+export TERM='xterm-256color'
 
 bindkey -e
 
