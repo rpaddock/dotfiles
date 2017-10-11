@@ -22,3 +22,7 @@ set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
 
 run '~/.tmux/plugins/tpm/tpm'
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
