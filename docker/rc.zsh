@@ -14,4 +14,4 @@ function drmi() {
 function drmall() {
   docker rm `docker ps -aq --no-trunc --filter "status=exited"`
 }
-
+alias dc="docker-compose"
