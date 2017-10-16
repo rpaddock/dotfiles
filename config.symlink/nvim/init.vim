@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 
 " Vundle setup
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-sensible.git'
