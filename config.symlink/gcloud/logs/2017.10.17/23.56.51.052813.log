@@ -1,0 +1,8 @@
+2017-10-17 23:56:51,054 DEBUG    root            Loaded Command Group: ['gcloud', 'iam']
+2017-10-17 23:56:51,055 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service_accounts']
+2017-10-17 23:56:51,063 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service-accounts', 'keys']
+2017-10-17 23:56:51,075 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service-accounts', 'keys', 'create']
+2017-10-17 23:56:51,086 DEBUG    root            Running [gcloud.iam.service-accounts.keys.create] with arguments: [--iam-account: "rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com", OUTPUT-FILE: "/Users/rpaddock/key.json"]
+2017-10-17 23:56:51,892 INFO     ___FILE_ONLY___ created key [966dec6fbf1665b6f9075e1ade39face671f5233] of type [json] as [/Users/rpaddock/key.json] for [rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com]
+
+2017-10-17 23:56:51,893 INFO     root            Display format "default".

@@ -1,0 +1,19 @@
+2017-10-18 00:23:03,197 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2017-10-18 00:23:03,200 DEBUG    root            Running [gcloud.init] with arguments: []
+2017-10-18 00:23:03,200 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2017-10-18 00:23:03,201 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2017-10-18 00:23:03,204 INFO     ___FILE_ONLY___ core:
+  account: rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com
+  disable_usage_reporting: 'True'
+  project: robin-backend-170818
+
+2017-10-18 00:23:03,204 INFO     ___FILE_ONLY___ 
+
+2017-10-18 00:23:21,993 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

@@ -53,7 +53,7 @@ unset config_files
 
 plugins=(git aws tmux vagrant docker)
 
-export PATH="$PATH:/bin/gem:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/rpaddock/.local/bin:/usr/local/Cellar/ruby/2.4.2/bin"
+export PATH="/usr/local/Cellar/python/2.7.14/bin:/usr/local/Cellar/ruby/2.4.2/bin:/bin/gem:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/rpaddock/.local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -1,0 +1,42 @@
+2017-10-17 23:59:58,647 DEBUG    root            Loaded Command Group: ['gcloud', 'info']
+2017-10-17 23:59:58,649 DEBUG    root            Running [gcloud.info] with arguments: []
+2017-10-17 23:59:58,694 INFO     root            Explicit Display.
+2017-10-17 23:59:58,695 INFO     ___FILE_ONLY___ Google Cloud SDK [175.0.0]
+
+Platform: [Mac OS X, x86_64] ('Darwin', 'Ryans-MBP', '16.7.0', 'Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64', 'x86_64', 'i386')
+Python Version: [2.7.14 (default, Sep 25 2017, 09:53:22)  [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)]]
+Python Location: [/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python]
+Site Packages: [Disabled]
+
+Installation Root: [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk]
+Installed Components:
+  core: [2017.10.09]
+  gsutil: [4.27]
+  bq: [2.0.27]
+System PATH: [./bin:/usr/local/bin:/usr/local/sbin:/Users/rpaddock/.dotfiles/bin:/Users/rpaddock/Projects/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin:/usr/local/sbin:/Users/rpaddock/.dotfiles/bin:/Users/rpaddock/Projects/go/bin:/bin/gem:/opt/X11/bin:/Users/rpaddock/.local/bin:/usr/local/Cellar/ruby/2.4.2/bin:/bin/gem:/usr/local/sbin:/usr/local/bin:./bin:/Users/rpaddock/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/rpaddock/.local/bin:/usr/local/Cellar/ruby/2.4.2/bin]
+Python PATH: [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/third_party:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python27.zip:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old:/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload]
+Cloud SDK on PATH: [False]
+Kubectl on PATH: [False]
+
+Installation Properties: [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/properties]
+User Config Directory: [/Users/rpaddock/.config/gcloud]
+Active Configuration Name: [default]
+Active Configuration Path: [/Users/rpaddock/.config/gcloud/configurations/config_default]
+
+Account: [rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com]
+Project: [robin-backend-170818]
+
+Current Properties:
+  [core]
+    project: [robin-backend-170818]
+    account: [rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com]
+    disable_usage_reporting: [True]
+
+Logs Directory: [/Users/rpaddock/.config/gcloud/logs]
+Last Log File: [/Users/rpaddock/.config/gcloud/logs/2017.10.17/23.59.33.637103.log]
+
+git: [git version 2.14.2]
+ssh: [OpenSSH_7.4p1, LibreSSL 2.5.0]
+
+
+

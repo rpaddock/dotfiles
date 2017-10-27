@@ -1,0 +1,8 @@
+2017-10-17 23:57:29,204 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2017-10-17 23:57:29,206 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'activate_service_account']
+2017-10-17 23:57:29,208 DEBUG    root            Running [gcloud.auth.activate-service-account] with arguments: [--key-file: "/Users/rpaddock/key.json"]
+2017-10-17 23:57:29,239 DEBUG    oauth2client.crypt ['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijk2NmRlYzZmYmYxNjY1YjZmOTA3NWUxYWRlMzlmYWNlNjcxZjUyMzMifQ', 'eyJpc3MiOiJycGFkZG9jay1kZXZAcm9iaW4tYmFja2VuZC0xNzA4MTguaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8uZW1haWwgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSBodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FwcGVuZ2luZS5hZG1pbiBodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUiLCJhdWQiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvdG9rZW4iLCJleHAiOjE1MDgzMTM0NDksImlhdCI6MTUwODMwOTg0OX0', 'Mi7V1TwtOyyHS5FatCxbvOLX7T2HGelge8fUMFPh0l8vnXIW_EyKW6E7IjkmrpJo1bMzcpFLi34-0DEu-e4Kzy5Yr5AZ5HTXyQnqJOEinFkZ1UVNb8DLZRaue_1UkmyYOpQ3N2U345umXRVcIbLt6MQ7bEfe-dgV_L4EQ5ogftOrCHPGAXtXTwjvw9odqUPrZaDos7CTdMS59u9Pwmp6tUrsCd2MO3dARR8YNuFGLi8j1l4wICbsXdY-Isr44QDVZSBkfT0L5aqb_ENY9z6w1bxKJ2snEgXG1q3HdhDWnAx-4D31swDMk8UlUqMJnj0y-1wHCK__ZlHwvVeCKN7h1A']
+2017-10-17 23:57:29,239 INFO     oauth2client.client Refreshing access_token
+2017-10-17 23:57:29,620 INFO     ___FILE_ONLY___ Activated service account credentials for: [rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com]
+
+2017-10-17 23:57:29,621 INFO     root            Display format "none".

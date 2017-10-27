@@ -1,0 +1,8 @@
+2017-10-17 23:49:38,147 DEBUG    root            Loaded Command Group: ['gcloud', 'iam']
+2017-10-17 23:49:38,150 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service_accounts']
+2017-10-17 23:49:38,164 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service-accounts', 'create']
+2017-10-17 23:49:38,185 INFO     oauth2client.client Refreshing access_token
+2017-10-17 23:49:38,367 DEBUG    root            Running [gcloud.iam.service-accounts.create] with arguments: [--display-name: "rpaddock-dev", NAME: "rpaddock-dev"]
+2017-10-17 23:49:40,133 INFO     ___FILE_ONLY___ Created service account [rpaddock-dev].
+
+2017-10-17 23:49:40,134 INFO     root            Display format "none".

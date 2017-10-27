@@ -63,8 +63,6 @@ syntax on
 set background=dark
 colorscheme dracula
 
-set termguicolors
-
 nnoremap j gj
 nnoremap k gk
 

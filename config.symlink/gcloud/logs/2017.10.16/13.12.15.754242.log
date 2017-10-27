@@ -1,0 +1,9 @@
+2017-10-16 13:12:15,755 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2017-10-16 13:12:15,757 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application_default']
+2017-10-16 13:12:15,758 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'print_access_token']
+2017-10-16 13:12:15,762 DEBUG    root            Running [gcloud.auth.application-default.print-access-token] with arguments: []
+2017-10-16 13:12:15,804 DEBUG    oauth2client.crypt ['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVhY2JjOTM5ZjUyZWM1MjU3ODk3N2MyMjE5OWIyMGJkZjM5M2RhZDMifQ', 'eyJpc3MiOiIxMzAzNzMwNjY0NjQtY29tcHV0ZUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTUwODE4ODMzNSwiaWF0IjoxNTA4MTg0NzM1fQ', 'l992Ky8WICbMQ0ddM_5o5kom2cAiy2s8EpaapHAOf767kZQaX7D9HK-X_tCGS5H8sDKMIVXIiyjO6y6e9ypGEnscAdJraubn1TGaS5R1aBggixRzl_orJjwaUoZCs0GpB1u2j-qh7wdIoqXFb1fQU1xDMFHOlCqk8ps_FX3QFZylalldHYKp6M95KRydOxqUTAge1OU3fxgMNq3LjZszGFeJsK6s54Afv2W1vgrzvW7w6X21OqOP_D4EqapGaZHu4a_aOqLYq1k22DzX5YfCzjbIX8LZVN9HMe8YF1e_xU2CnXn_pc7hHSdCEuMHT8IzL2wBQKDBwZeMHAxflbBPLg']
+2017-10-16 13:12:15,804 INFO     oauth2client.client Refreshing access_token
+2017-10-16 13:12:15,927 INFO     root            Display format "value(access_token)".
+2017-10-16 13:12:15,927 INFO     ___FILE_ONLY___ ya29.ElrmBDM6Jw0ueys74EPgeq7SXKBqOqtURLMz6izO7LRTm_pAvf9Xm6k3T00rbdkULzu81HWnbkah6TIvNnQKZIoiAj0NZ59sXa7GkmFOjMu9lCapHVAqmgoudRk
+

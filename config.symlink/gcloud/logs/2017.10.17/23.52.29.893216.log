@@ -1,0 +1,70 @@
+2017-10-17 23:52:29,894 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2017-10-17 23:52:29,902 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'add_iam_policy_binding']
+2017-10-17 23:52:29,904 DEBUG    root            Running [gcloud.projects.add-iam-policy-binding] with arguments: [--member: "serviceAccount:rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com", --role: "roles/editor", PROJECT_ID: "robin-backend-170818"]
+2017-10-17 23:52:31,583 INFO     root            Display format "default".
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___ bindings
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,585 INFO     ___FILE_ONLY___ members
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ serviceAccount:130373066464-compute@developer.gserviceaccount.com
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,586 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___ serviceAccount:130373066464@cloudservices.gserviceaccount.com
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___ serviceAccount:rpaddock-dev@robin-backend-170818.iam.gserviceaccount.com
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,587 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ role
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ roles/editor
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,588 INFO     ___FILE_ONLY___ members
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ -
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ user:rpaddock@gmail.com
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___   
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ role
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,589 INFO     ___FILE_ONLY___ roles/owner
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ etag
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ BwVbzK8HS4A=
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ 
+
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ version
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ :
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___  
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ 1
+2017-10-17 23:52:31,590 INFO     ___FILE_ONLY___ 
+

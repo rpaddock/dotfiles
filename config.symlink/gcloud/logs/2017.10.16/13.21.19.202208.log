@@ -1,0 +1,6 @@
+2017-10-16 13:21:19,204 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2017-10-16 13:21:19,207 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application_default']
+2017-10-16 13:21:19,212 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'login']
+2017-10-16 13:21:19,214 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'revoke']
+2017-10-16 13:21:19,215 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'print_access_token']
+2017-10-16 13:21:19,217 ERROR    root            (gcloud.auth.application-default) Invalid choice: 'print-api-key'. Did you mean 'print-access-token'?

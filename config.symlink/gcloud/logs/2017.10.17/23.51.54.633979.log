@@ -1,0 +1,41 @@
+2017-10-17 23:51:54,643 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2017-10-17 23:51:54,660 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'add_iam_policy_binding']
+2017-10-17 23:51:54,663 DEBUG    root            Running [gcloud.projects.add-iam-policy-binding] with arguments: [--member: "serviceAccount:rpaddock-dev@robin-backend.iam.gserviceaccount.com", --role: "roles/editor", PROJECT_ID: "robin-backend"]
+2017-10-17 23:51:54,996 DEBUG    root            HttpError in projects API call.
+Traceback (most recent call last):
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudresourcemanager/projects_api.py", line 160, in GetIamPolicy
+    return client.projects.GetIamPolicy(policy_request)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/cloudresourcemanager/v1/cloudresourcemanager_v1_client.py", line 892, in GetIamPolicy
+    config, request, global_params=global_params)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 722, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 728, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 599, in __ProcessHttpResponse
+    http_response, method_config=method_config, request=request)
+HttpForbiddenError: HttpError accessing <https://cloudresourcemanager.googleapis.com/v1/projects/robin-backend:getIamPolicy?alt=json>: response: <{'status': '403', 'content-length': '126', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'vary': 'Origin, X-Origin, Referer', 'server': 'ESF', '-content-encoding': 'gzip', 'cache-control': 'private', 'date': 'Wed, 18 Oct 2017 06:51:54 GMT', 'x-frame-options': 'SAMEORIGIN', 'alt-svc': 'quic=":443"; ma=2592000; v="39,38,37,35"', 'content-type': 'application/json; charset=UTF-8'}>, content <{
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+>
+2017-10-17 23:51:55,006 DEBUG    root            (gcloud.projects.add-iam-policy-binding) Project [robin-backend] does not exist, or you do not have permission to access it.
+Traceback (most recent call last):
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 789, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 759, in Run
+    resources = command_instance.Run(args)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/http_retry.py", line 37, in wrapper
+    should_retry_if=retryIf, sleep_ms=1000)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 155, in TryFunc
+    return func(*args, **kwargs), None
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/surface/projects/add_iam_policy_binding.py", line 47, in Run
+    return projects_api.AddIamPolicyBinding(project_ref, args.member, args.role)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudresourcemanager/projects_api.py", line 207, in AddIamPolicyBinding
+    policy = GetIamPolicy(project_ref)
+  File "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudresourcemanager/projects_api.py", line 162, in GetIamPolicy
+    raise projects_util.ConvertHttpError(error)
+ProjectAccessError: Project [robin-backend] does not exist, or you do not have permission to access it.
+2017-10-17 23:51:55,012 ERROR    root            (gcloud.projects.add-iam-policy-binding) Project [robin-backend] does not exist, or you do not have permission to access it.
