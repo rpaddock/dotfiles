@@ -1,8 +1,3 @@
-/* File: slate.example.js
- * Author: lunixbochs (Ryan Hileman)
- * Project: http://github.com/lunixbochs/reslate
- */
-
 S.src('.reslate.js');
 // enable to see debug messages in Console.app
 //$.debug = true;
@@ -88,7 +83,7 @@ slate.bindAll({
         // direct focus
         q: $.focus('iTerm2'),
         w: $.focus('Google Chrome'),
-        e: $.focus('Messages'),
+        e: $.focus('Chat'),
         r: $.focus('Slack'),
         t: $.focus('Spotify'),
         a: $.focus('Airmail'),
