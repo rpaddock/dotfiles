@@ -22,6 +22,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'dracula/vim'
+Plugin 'tomasiser/vim-code-dark'
 call vundle#end()
 
 filetype plugin indent on
@@ -47,7 +48,7 @@ set smarttab
 set softtabstop=4
 set tabstop=4
 
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'codedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'     " Show just the filename
@@ -61,7 +62,7 @@ set pastetoggle=<F2>
 
 syntax on
 set background=dark
-colorscheme dracula
+colorscheme codedark
 
 set termguicolors
 

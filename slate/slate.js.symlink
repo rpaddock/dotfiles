@@ -88,11 +88,12 @@ slate.bindAll({
         t: $.focus('Spotify'),
         a: $.focus('Airmail'),
         s: $.focus('Code'),
-        d: $.focus('IntelliJ IDEA'),
-        f: $.focus('OmniFocus'),
+        d: $.focus('Unity'),
+        f: $.focus('Figma'),
         g: $.focus('MacDown'),
         x: $.focus('Xcode'),
         p: $.focus('Preview'),
+        c: $.focus('Digital Color Meter'),
         
         // utility functions
         f1: 'relaunch',

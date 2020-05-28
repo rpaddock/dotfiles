@@ -22,6 +22,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'dracula/vim'
+Plugin 'tomasiser/vim-code-dark'
 call vundle#end()
 
 filetype plugin indent on
