@@ -8,3 +8,7 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias zshconfig="vim ~/.zshrc"
+alias vim="nvim"
+alias vi="nvim"

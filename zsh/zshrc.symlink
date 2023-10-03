@@ -1,19 +1,4 @@
 export DOTFILES=$HOME/.dotfiles
-export ZSH=/Users/ryan/.oh-my-zsh
-export PROJECTS=~/Projects/robin
-
-ZSH_THEME="rpaddock"
-
-# CASE_SENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
-# export UPDATE_ZSH_DAYS=13
-# DISABLE_LS_COLORS="true"
-# DISABLE_AUTO_TITLE="true"
-# ENABLE_CORRECTION="true"
-# COMPLETION_WAITING_DOTS="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-# HIST_STAMPS="mm/dd/yyyy"
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -51,27 +36,8 @@ done
 
 unset config_files
 
-plugins=(git aws tmux vagrant docker)
-
-export PATH="./bin:/Users/ryan/.dotfiles/bin:/Users/ryan/.local/bin:/usr/local/opt/node@10/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/mongodb-community@3.6/bin:/usr/local/opt/mysql@5.7/bin/$PATH"
+export PATH="./bin:/Users/rpaddock/.dotfiles/bin:/Users/rpaddock/.local/bin:/usr/local/opt/node@10/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/mongodb-community@3.6/bin:/usr/local/opt/mysql@5.7/bin/$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# export LANG=en_US.UTF-8
-
-# export ARCHFLAGS="-arch x86_64"
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-alias ls="ls -G"
-alias ll="ls -lah"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vim="nvim"
-alias vi="nvim"
-
-# VirtualBox aliases
-alias vms='VBoxManage list runningvms'
 
 # Start new tmux session
 function tn() {
@@ -86,84 +52,9 @@ function tn() {
 unsetopt correct_all
 unsetopt correct
 
-export EDITOR='nvim'
-export BROWSER='/Applications/Google Chrome.app'
-export TERM='xterm-256color'
-
-export LOCALSTACK_API_KEY=f4bb37ad
-export AWS_SDK_LOAD_CONFIG=true
-
-
-export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-function delhost() {
-  sed -i '' "${1}d" ~/.ssh/known_hosts
-  echo "Deleted line ${1} from known_hosts file"
-}
-
-function pssh() {
-  ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no pi@"192.168.1.${1}"
-}
-
-function rssh() {
-  ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no robin@"192.168.1.${1}"
-}
 
 . /usr/local/etc/profile.d/z.sh
 
 bindkey -e
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryan/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryan/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ryan/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryan/google-cloud-sdk/completion.zsh.inc'; fi
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-[[ -f ~/.robinssh/bin/completion.zsh ]] && . ~/.robinssh/bin/completion.zsh
-
