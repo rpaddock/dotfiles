@@ -36,25 +36,5 @@ done
 
 unset config_files
 
-export PATH="./bin:/Users/rpaddock/.dotfiles/bin:/Users/rpaddock/.local/bin:/usr/local/opt/node@10/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/mongodb-community@3.6/bin:/usr/local/opt/mysql@5.7/bin/$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Start new tmux session
-function tn() {
-  if [ -z "$1" ]; then;
-    session_name=$(basename `pwd`)
-  else
-    session_name=$1
-  fi
-  tmux new-session -s $session_name -n 'main'
-}
-
-unsetopt correct_all
-unsetopt correct
-
-
 . /usr/local/etc/profile.d/z.sh
-
-bindkey -e
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
