@@ -20,6 +20,7 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
+set -g @plugin 'dmitry-kabanov/tmux-statusline-themes'
 
 run '~/.tmux/plugins/tpm/tpm'
 

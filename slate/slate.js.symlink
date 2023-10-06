@@ -82,19 +82,14 @@ slate.bindAll({
         '2': $('toss', '1', 'resize'),
         '3': $('toss', '2', 'resize'),
         // direct focus
-        q: $.focus('iTerm2'),
+        q: $.focus('kitty'),
         w: $.focus('Google Chrome'),
-        e: $.focus('Google Chat'),
-        r: $.focus('JetBrains Rider'),
-        t: $.focus('Unity'),
+        e: $.focus('Obsidian'),
+        r: $.focus('Spotify'),
         a: $.focus('Airmail'),
         s: $.focus('Code'),
-        d: $.focus('IntelliJ IDEA'),
+        d: $.focus('Obsidian'),
         f: $.focus('Figma'),
-        g: $.focus('MacDown'),
-        x: $.focus('Xcode'),
-        p: $.focus('Preview'),
-        c: $.focus('Digital Color Meter'),
         
         // utility functions
         f1: 'relaunch',
