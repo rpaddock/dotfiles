@@ -20,7 +20,7 @@ ts.setup {
     'yaml',
     'css',
     'html',
-    'lua'
+    'lua',
   },
   autotag = {
     enable = true,

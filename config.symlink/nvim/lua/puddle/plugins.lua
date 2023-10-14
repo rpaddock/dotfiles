@@ -64,4 +64,7 @@ require('lazy').setup({
     { 'junegunn/fzf', dir = '~/.fzf', build = './install --all' }, -- fuzzy finding
     'alexghergh/nvim-tmux-navigation', -- tmux navigator
     'Mofiqul/vscode.nvim', -- vscode dark theme
+    'm4xshen/autoclose.nvim', -- auto close
+
+    'simrat39/rust-tools.nvim', -- rust tools
 })

@@ -36,8 +36,8 @@ done
 
 unset config_files
 
-# ctrl+r isn't working in tmux, so explicitly setting
-bindkey '^R' history-incremental-search-backward
+# enable emac terminal keybindings
+bindkey -e
 
 # Disable autocorrect
 unsetopt correct_all
@@ -46,3 +46,4 @@ unsetopt correct
 # terminal tools that don't warrent their own directory
 . /usr/local/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

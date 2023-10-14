@@ -5,11 +5,16 @@ bind-key C-Space send-prefix
 set-option -g mouse on
 set -g escape-time 10
 
-# Add truecolor support
-set-option -ga terminal-overrides ",xterm-256color:Tc"
+# Set default terminal
+set -g default-terminal "xterm-kitty"                                                                    
+set -g terminal-overrides "xterm-kitty"                                                                                             
 
-# Default terminal is 256 colors
-set -g default-terminal "screen-256color"
+# true colours support                                                                                                              
+set -ga terminal-overrides ",xterm-256color:Tc"                                                                         
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'                                                   
+
+# underscore colours - needs tmux-3.0                                                                                               
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
