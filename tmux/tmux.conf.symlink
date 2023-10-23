@@ -6,11 +6,12 @@ set-option -g mouse on
 set -g escape-time 10
 
 # Set default terminal
-set -g default-terminal "xterm-kitty"                                                                    
-set -g terminal-overrides "xterm-kitty"                                                                                             
+set -g default-terminal 'xterm-kitty'
+set -g terminal-overrides 'xterm-kitty'
+set -ga update-environment 'KITTY_LISTEN_ON'
 
 # true colours support                                                                                                              
-set -ga terminal-overrides ",xterm-256color:Tc"                                                                         
+set -ga terminal-overrides ',xterm-256color:Tc'                                                                         
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'                                                   
 
 # underscore colours - needs tmux-3.0                                                                                               
@@ -26,6 +27,8 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
 set -g @plugin 'dmitry-kabanov/tmux-statusline-themes'
+# set -g @plugin 'janoamaral/tokyo-night-tmux'
+set -g @plugin 'khanghh/tmux-dark-plus-theme'
 
 run '~/.tmux/plugins/tpm/tpm'
 
@@ -35,3 +38,4 @@ set -g mouse on
 # Start windows and panes at 1, not 0
 set -g base-index 1
 setw -g pane-base-index 1
+
