@@ -21,19 +21,22 @@ require('lazy').setup({
 
     -- autocompletion
     'hrsh7th/nvim-cmp',
-    { 'L3MON4D3/LuaSnip', dependencies = {
-        'rafamadriz/friendly-snippets',
-    } },
+    {
+        'L3MON4D3/LuaSnip',
+        dependencies = {
+            'rafamadriz/friendly-snippets',
+        }
+    },
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-nvim-lua',
 
-    'onsails/lspkind-nvim', -- vscode like pictograms
+    'onsails/lspkind-nvim',  -- vscode like pictograms
     'folke/which-key.nvim',
     'neovim/nvim-lspconfig', -- lsp
-    'nvimdev/lspsaga.nvim', -- lsp ui
+    'nvimdev/lspsaga.nvim',  -- lsp ui
 
     {
         'nvim-treesitter/nvim-treesitter',
@@ -45,7 +48,7 @@ require('lazy').setup({
     'nvim-lua/plenary.nvim',
 
     -- Neoconf
-    { 'folke/neoconf.nvim', cmd = 'Neoconf' },
+    { 'folke/neoconf.nvim',        cmd = 'Neoconf' },
 
     -- Surround
     {
@@ -58,13 +61,31 @@ require('lazy').setup({
             })
         end
     },
-
-    { 'numToStr/Comment.nvim', lazy = false, }, -- commenting
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } }, -- lualine
-    { 'junegunn/fzf', dir = '~/.fzf', build = './install --all' }, -- fuzzy finding
-    'alexghergh/nvim-tmux-navigation', -- tmux navigator
-    'Mofiqul/vscode.nvim', -- vscode dark theme
-    'm4xshen/autoclose.nvim', -- auto close
-
-    'simrat39/rust-tools.nvim', -- rust tools
+    { 'numToStr/Comment.nvim',     lazy = false, },                                                              -- commenting
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },                           -- lualine
+    { 'junegunn/fzf',              dir = '~/.fzf',                                  build = './install --all' }, -- fuzzy finding
+    'alexghergh/nvim-tmux-navigation',                                                                           -- tmux navigator
+    'Mofiqul/vscode.nvim',                                                                                       -- vscode dark theme
+    'm4xshen/autoclose.nvim',                                                                                    -- auto close
+    'simrat39/rust-tools.nvim',                                                                                  -- rust tools
+    {
+        'folke/zen-mode.nvim',
+        opts = {
+            tmux = { enabled = false }, -- disables the tmux statusline
+            kitty = {
+                enabled = false,
+                font = '+4', -- font size increment
+            },
+        }
+    }, --zen mode
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',
+            'nvim-tree/nvim-web-devicons',
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {},
+        version = '^1.0.0',
+    }, -- barline
 })

@@ -1,4 +1,5 @@
-require('puddle.base')
+require('puddle.options')
 require('puddle.highlights')
-require('puddle.keybindings')
-require('puddle.plugins')
+require('puddle.keymaps')
+require('puddle.lazy')
+require('puddle.colorscheme')
