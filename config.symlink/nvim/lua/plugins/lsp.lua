@@ -53,7 +53,7 @@ return {
                 'pyright',
                 'lua_ls',
                 'tsserver',
-                'rust_analyzer'
+                'rust_analyzer',
             })
 
             local rust_tools = require('rust-tools')

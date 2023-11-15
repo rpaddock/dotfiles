@@ -4,5 +4,6 @@ return {
     {'Mofiqul/vscode.nvim'},
     {'luisiacc/gruvbox-baby'},
     {'folke/tokyonight.nvim'},
-    {'catppuccin/nvim'}
+    {'catppuccin/nvim'},
+    {'savq/melange-nvim'},
 }

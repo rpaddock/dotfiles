@@ -5,13 +5,7 @@ return {
     keys = {
         {
             '<leader>tt',
-            '<cmd>ToggleTerm dir=%:p:h direction=horizontal<cr>',
-            desc = 'Open a horizontal terminal at the Desktop directory'
-        },
-        {
-            '<leader>th',
-            '<cmd>ToggleTerm dir=~/ direction=horizontal<cr>',
-            '<cmd>ToggleTerm dir=%:p:h direction=horizontal<cr>',
+            '<cmd>ToggleTerm direction=horizontal<cr>',
             desc = 'Open a horizontal terminal at the Desktop directory'
         },
         {
@@ -19,20 +13,33 @@ return {
             '<cmd>ToggleTerm dir=~/Desktop direction=horizontal<cr>',
             desc = 'Open a horizontal terminal at the Desktop directory'
         }
+
     },
     config = function ()
-        local status_ok, toggleterm = pcall(require, "toggleterm")
+        local status_ok, toggleterm = pcall(require, 'toggleterm')
         if not status_ok then
           return
         end
+
+        local opts = {noremap = true, silent = true}
+
         toggleterm.setup({
             open_mapping = [[<c-\>]],
             size = 10,
             hide_numbers = true,
             insert_mappings = true,
         })
+
+        local Terminal  = require('toggleterm.terminal').Terminal
+        local lazygit = Terminal:new({ cmd = 'lazygit', hidden = true })
+
+        function _lazygit_toggle()
+          lazygit:toggle()
+        end
+
+        vim.api.nvim_set_keymap('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', {noremap = true, silent = true})
+
         function _G.set_terminal_keymaps()
-            local opts = {noremap = true}
             vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
             vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
             vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)

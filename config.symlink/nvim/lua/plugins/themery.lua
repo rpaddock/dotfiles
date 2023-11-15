@@ -29,6 +29,10 @@ return {
                 {
                     name = 'tokyonight',
                     colorscheme = 'tokyonight'
+                },
+                {
+                    name = 'melange',
+                    colorscheme = 'melange'
                 }
             },
             themeConfigFile = '~/.config/nvim/lua/puddle/colorscheme.lua',

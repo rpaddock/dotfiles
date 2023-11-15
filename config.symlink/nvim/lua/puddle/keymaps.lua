@@ -15,8 +15,8 @@ keymap.set('n', 'H', '^', opts)
 keymap.set('n', 'L', '$', opts)
 
 -- quickly switch between buffers
-keymap.set('n', '<', ':bp<CR>', opts)
-keymap.set('n', '>', ':bn<CR>', opts)
+keymap.set('n', '>', ':bp<CR>', opts)
+keymap.set('n', '<', ':bn<CR>', opts)
 
 -- write to all buffers
 keymap.set('n', '<leader>w', ':wa<CR>', opts)
