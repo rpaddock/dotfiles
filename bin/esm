@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Run a TypeScript ESM file
+#
+# USAGE:
+#
+#   $ esm /path/to/file.ts
+node --no-warnings=ExperimentalWarning --loader ts-node/esm "$1"
