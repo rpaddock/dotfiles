@@ -1,3 +1,5 @@
+source-file ~/.tmux.reset.conf
+
 set -g prefix C-Space
 unbind-key C-b
 bind-key C-Space send-prefix
@@ -28,9 +30,10 @@ set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
 set -g @plugin 'dmitry-kabanov/tmux-statusline-themes'
 # set -g @plugin 'janoamaral/tokyo-night-tmux'
-set -g @plugin 'khanghh/tmux-dark-plus-theme'
+# set -g @plugin 'khanghh/tmux-dark-plus-theme'
 
-run '~/.tmux/plugins/tpm/tpm'
+# Source status line theme for tmux:
+source-file ~/.dotfiles/tmux/tmux-kanagawa-dark.conf
 
 # Enable mouse support
 set -g mouse on
@@ -39,3 +42,21 @@ set -g mouse on
 set -g base-index 1
 setw -g pane-base-index 1
 
+# Resize panes
+bind-key -r -T prefix M-Up      resize-pane -U 5
+bind-key -r -T prefix M-Down    resize-pane -D 5
+bind-key -r -T prefix M-Left    resize-pane -L 5
+bind-key -r -T prefix M-Right   resize-pane -R 5
+bind-key -r -T prefix C-Up      resize-pane -U
+bind-key -r -T prefix C-Down    resize-pane -D
+bind-key -r -T prefix C-Left    resize-pane -L
+bind-key -r -T prefix C-Right   resize-pane -R
+
+# Reload config
+bind-key r source-file ~/.tmux.conf \; display-message '~/.tmux.conf reloaded'
+
+# Modify config
+bind-key M split-window -h 'nvim ~/.tmux.conf'
+
+# Update plugins
+run '~/.tmux/plugins/tpm/tpm'

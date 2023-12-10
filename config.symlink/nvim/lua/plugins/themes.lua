@@ -6,4 +6,5 @@ return {
     {'folke/tokyonight.nvim'},
     {'catppuccin/nvim'},
     {'savq/melange-nvim'},
+    {'rebelot/kanagawa.nvim'},
 }

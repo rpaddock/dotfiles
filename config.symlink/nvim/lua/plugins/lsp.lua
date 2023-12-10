@@ -56,16 +56,24 @@ return {
                 'rust_analyzer',
             })
 
+            -- Rust
             local rust_tools = require('rust-tools')
             rust_tools.setup {
                 server = {
-                    on_attach = function(client, bufnr)
+                    on_attach = function(_, bufnr)
                         vim.keymap.set('n', '<leader>ca', rust_tools.hover_actions.hover_actions, { buffer = bufnr })
                     end
                 }
             }
 
             lsp.setup()
+
+            -- Icons
+            local signs = { Error = '󰅚 ', Warn = '󰀪 ', Hint = '󰌶 ', Info = ' ' }
+            for type, icon in pairs(signs) do
+              local hl = 'DiagnosticSign' .. type
+              vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+            end
 
             local cmp = require('cmp')
             -- local cmp_action = require('lsp-zero').cmp_action()

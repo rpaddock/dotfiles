@@ -4,19 +4,12 @@ local global = vim.g
 global.mapleader = ' '
 global.maplocalleader = ' '
 
--- jj to exit insert mode
-keymap.set('i', 'jj', '<Esc>')
-
 -- make CTRL + C behave exactly the same as ESC
 keymap.set('i', '<C-c>', '<ESC>', opts)
 
 -- remap ^ and $ to H and L, respectively
 keymap.set('n', 'H', '^', opts)
 keymap.set('n', 'L', '$', opts)
-
--- quickly switch between buffers
-keymap.set('n', '>', ':bp<CR>', opts)
-keymap.set('n', '<', ':bn<CR>', opts)
 
 -- write to all buffers
 keymap.set('n', '<leader>w', ':wa<CR>', opts)
@@ -50,5 +43,9 @@ keymap.set('v', '<leader>y', '"*y', opts)
 keymap.set('v', '<TAB>', '<S->>gv', opts)
 keymap.set('v', '<S-TAB>', '<S-<>gv', opts)
 
--- greatest remap ever
+-- Paste over visual selection, keeping paste register
 keymap.set('x', '<leader>p', '"_dP', opts)
+
+-- splits
+keymap.set('n', '<leader>%', ':vsplit')
+keymap.set('n', '<leader>"', ':split')

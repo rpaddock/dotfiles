@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Run a TypeScript file via ts-node
+#
+# USAGE:
+#
+#   $ ts /path/to/file.ts
+npx ts-node "$1"

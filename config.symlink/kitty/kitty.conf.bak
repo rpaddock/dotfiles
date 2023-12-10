@@ -2244,8 +2244,4 @@ listen_on unix:/tmp/kitty
 #include vscode-dark.conf
 #include tokyo-night.conf
 #include melange_dark.conf
-
-# BEGIN_KITTY_THEME
-# kanagawabones
-include current-theme.conf
-# END_KITTY_THEME
+include kanagawa.conf

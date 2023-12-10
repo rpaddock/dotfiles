@@ -107,19 +107,19 @@ return {
                   cwd = '${workspaceFolder}',
                 },
                 {
-                    type = "pwa-node",
-                    request = "launch",
-                    name = "Debug Jest Tests",
+                    type = 'pwa-node',
+                    request = 'launch',
+                    name = 'Debug Jest Tests',
                     -- trace = true, -- include debugger info
-                    runtimeExecutable = "node",
+                    runtimeExecutable = 'node',
                     runtimeArgs = {
-                      "./node_modules/jest/bin/jest.js",
-                      "--runInBand",
+                      './node_modules/jest/bin/jest.js',
+                      '--runInBand',
                     },
-                    rootPath = "${workspaceFolder}",
-                    cwd = "${workspaceFolder}",
-                    console = "integratedTerminal",
-                    internalConsoleOptions = "neverOpen",
+                    rootPath = '${workspaceFolder}',
+                    cwd = '${workspaceFolder}',
+                    console = 'integratedTerminal',
+                    internalConsoleOptions = 'neverOpen',
                   }
               }
             end

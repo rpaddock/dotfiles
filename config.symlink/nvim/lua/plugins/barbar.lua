@@ -4,11 +4,13 @@ return {
         'lewis6991/gitsigns.nvim',
         'nvim-tree/nvim-web-devicons',
     },
-    init = function() vim.g.barbar_auto_setup = false end,
     config = function()
         local map = vim.api.nvim_set_keymap
         local opts = { noremap = true, silent = true }
 
+        -- Navigate buffers...
+        map('n', 'gj', '<Cmd>BufferPrev<CR>', opts)
+        map('n', 'gk', '<Cmd>BufferNext<CR>', opts)
         -- Goto buffer in position...
         map('n', 'g1', '<Cmd>BufferGoto 1<CR>', opts)
         map('n', 'g2', '<Cmd>BufferGoto 2<CR>', opts)

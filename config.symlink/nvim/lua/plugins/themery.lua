@@ -33,7 +33,11 @@ return {
                 {
                     name = 'melange',
                     colorscheme = 'melange'
-                }
+                },
+                {
+                    name = 'kanagawa',
+                    colorscheme = 'kanagawa'
+                },
             },
             themeConfigFile = '~/.config/nvim/lua/puddle/colorscheme.lua',
             livePreview = true,
