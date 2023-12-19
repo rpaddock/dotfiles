@@ -1,26 +1,23 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'windwp/nvim-ts-autotag',
+        },
         event = { 'BufReadPre', 'BufNewFile' },
         cmd = { 'TSInstallInfo', 'TSInstall' },
         config = function()
             local status_ok, treesitter = pcall(require, 'nvim-treesitter.configs')
-
             if not status_ok then
                 return
             end
-
-            treesitter.setup({
+            treesitter.setup {
                 ensure_installed = { 'lua', 'vim', 'python', 'markdown_inline', 'rust', 'typescript', 'tsx', 'yaml' },
                 sync_install = false,
-                auto_install = false,
+                auto_install = true,
                 ignore_install = {},
                 highlight = {
                     enable = true
-                },
-                context_commentstring = {
-                    enable = true,
-                    autocmd = false
                 },
                 autopairs = {
                     enable = true
@@ -31,8 +28,7 @@ return {
                 indent = {
                     enable = true,
                 }
-            })
+            }
         end
-
-    }
+    },
 }

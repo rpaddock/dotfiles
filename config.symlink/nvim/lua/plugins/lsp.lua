@@ -33,27 +33,42 @@ return {
             { 'SmiteshP/nvim-navic' },
             { 'onsails/lspkind.nvim' },
             { 'simrat39/rust-tools.nvim' },
+            { 'pmizio/typescript-tools.nvim' },
 
         },
         config = function()
             local lsp = require('lsp-zero').preset({})
-            local navic = require('nvim-navic')
             local lspkind = require('lspkind')
-
-            lsp.on_attach(function(client, bufnr)
-                lsp.default_keymaps({buffer = bufnr})
-                if client.server_capabilities.documentSymbolProvider then
-                    navic.attach(client, bufnr)
-                end
-            end)
 
             require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
             lsp.ensure_installed({
                 'pyright',
                 'lua_ls',
-                'tsserver',
                 'rust_analyzer',
+            })
+
+            vim.api.nvim_create_autocmd('LspAttach', {
+              desc = 'LSP actions',
+              callback = function()
+                local bufmap = function(mode, lhs, rhs)
+                  local opts = {buffer = true}
+                  vim.keymap.set(mode, lhs, rhs, opts)
+                end
+
+                bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+                bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+                bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+                bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+                bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+                bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+                bufmap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+                bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+                bufmap('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+                bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+                bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+                bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+              end
             })
 
             -- Rust
@@ -61,9 +76,25 @@ return {
             rust_tools.setup {
                 server = {
                     on_attach = function(_, bufnr)
-                        vim.keymap.set('n', '<leader>ca', rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+                        vim.keymap.set('n', '<leader>a', rust_tools.hover_actions.hover_actions, { buffer = bufnr })
                     end
                 }
+            }
+
+            -- Typescript
+            require('typescript-tools').setup {
+                settings = {
+                     -- array of strings("fix_all"|"add_missing_imports"|"remove_unused"|
+                    -- "remove_unused_imports"|"organize_imports") -- or string "all"
+                    -- to include all supported code actions
+                    -- specify commands exposed as code_actions
+                    expose_as_code_action = {
+                        'add_missing_imports'
+                    },
+                    tsserver_plugins = {
+                        '@styled/typescript-styled-plugin',
+                    },
+                },
             }
 
             lsp.setup()

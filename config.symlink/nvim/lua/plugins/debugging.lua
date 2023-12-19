@@ -137,11 +137,11 @@ return {
             vim.keymap.set('n', '<leader>ui', dapui.toggle, { desc = 'Toggle Debug UI', silent = true })
             vim.keymap.set('n', '<leader>du', dap.up, { desc = 'Up', silent = true })
             vim.keymap.set('n', '<leader>dd', dap.down, { desc = 'Down', silent = true })
-            vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, { desc = 'Toggle Breakpoint', silent = true })
-            vim.keymap.set('n', '<leader>B', function()
+            vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Toggle Breakpoint', silent = true })
+            vim.keymap.set('n', '<leader>dB', function()
               dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
             end, { desc = 'Toggle Conditional Breakpoint', silent = true })
-            vim.keymap.set('n', '<leader><c-b>', dap.clear_breakpoints, { desc = 'Clear Breakpoints', silent = true })
+            vim.keymap.set('n', '<leader>d<c-b>', dap.clear_breakpoints, { desc = 'Clear Breakpoints', silent = true })
         end,
     },
 }
