@@ -1,4 +1,4 @@
-source-file ~/.tmux.reset.conf
+# source-file ~/.tmux.reset.conf
 
 set -g prefix C-Space
 unbind-key C-b
