@@ -11,24 +11,34 @@ return {
             if not status_ok then
                 return
             end
-            treesitter.setup {
-                ensure_installed = { 'lua', 'vim', 'python', 'markdown_inline', 'rust', 'typescript', 'tsx', 'yaml' },
+            treesitter.setup({
+                ensure_installed = {
+                    'lua',
+                    'vim',
+                    'python',
+                    'markdown_inline',
+                    'rust',
+                    'javascript',
+                    'typescript',
+                    'tsx',
+                    'yaml',
+                },
                 sync_install = false,
                 auto_install = true,
                 ignore_install = {},
                 highlight = {
-                    enable = true
+                    enable = true,
                 },
                 autopairs = {
-                    enable = true
+                    enable = true,
                 },
                 autotag = {
-                    enable = true
+                    enable = true,
                 },
                 indent = {
                     enable = true,
-                }
-            }
-        end
+                },
+            })
+        end,
     },
 }

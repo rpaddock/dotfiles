@@ -46,6 +46,7 @@ return {
                 'pyright',
                 'lua_ls',
                 'rust_analyzer',
+                'tailwindcss',
             })
 
             vim.api.nvim_create_autocmd('LspAttach', {

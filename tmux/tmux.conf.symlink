@@ -52,6 +52,11 @@ bind-key -r -T prefix C-Down    resize-pane -D
 bind-key -r -T prefix C-Left    resize-pane -L
 bind-key -r -T prefix C-Right   resize-pane -R
 
+# Panes start at cwd
+bind  c  new-window      -c "#{pane_current_path}"
+bind  %  split-window -h -c "#{pane_current_path}"
+bind '"' split-window -v -c "#{pane_current_path}"
+
 # Reload config
 bind-key r source-file ~/.tmux.conf \; display-message '~/.tmux.conf reloaded'
 

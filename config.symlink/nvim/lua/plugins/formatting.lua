@@ -5,6 +5,7 @@ return {
         { '<leader>F', ':FormatWrite<CR>', desc = 'Format Write' },
     },
     config = function()
+        local types = 'formatter.filetypes.'
         require('formatter').setup({
             logging = false,
             filetype = {
@@ -81,15 +82,17 @@ return {
                     end,
                 },
                 sql = {
-                    -- prettierd
                     function()
                         return {
                             exe = 'sql-formatter',
                             args = { vim.api.nvim_buf_get_name(0) },
-                            try_node_modules = true,
                             stdin = true,
                         }
                     end,
+                },
+                python = {
+                    require(types .. 'python').black,
+                    require(types .. 'python').isort,
                 },
             },
         })

@@ -93,8 +93,8 @@ return {
             local map = vim.api.nvim_set_keymap
             local opts = { noremap = true, silent = true }
 
-            map('n', 'gj', '<Cmd>BufferPrev<CR>', opts)
-            map('n', 'gk', '<Cmd>BufferNext<CR>', opts)
+            map('n', '<', '<Cmd>BufferPrev<CR>', opts)
+            map('n', '>', '<Cmd>BufferNext<CR>', opts)
             map('n', 'g1', '<Cmd>BufferGoto 1<CR>', opts)
             map('n', 'g2', '<Cmd>BufferGoto 2<CR>', opts)
             map('n', 'g3', '<Cmd>BufferGoto 3<CR>', opts)
