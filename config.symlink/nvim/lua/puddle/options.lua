@@ -27,8 +27,8 @@ set.shiftwidth = 4
 set.tabstop = 4
 set.wrap = false -- No Wrap lines
 set.backspace = { 'start', 'eol', 'indent' }
-set.path:append { '**' } -- Finding files - Search down into subfolders
-set.wildignore:append { '*/node_modules/*' }
+set.path:append({ '**' }) -- Finding files - Search down into subfolders
+set.wildignore:append({ '*/node_modules/*' })
 set.hidden = true -- Hide buffers instead of closing them
 
 -- Undercurl
@@ -37,9 +37,15 @@ vim.cmd([[let &t_Ce = '\e[4:0m']])
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd('InsertLeave', {
-  pattern = '*',
-  command = 'set nopaste'
+    pattern = '*',
+    command = 'set nopaste',
+})
+
+-- Close quickfind window after selection
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'qf' },
+    command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]],
 })
 
 -- Add asterisks in block comments
-set.formatoptions:append { 'r' }
+set.formatoptions:append({ 'r' })

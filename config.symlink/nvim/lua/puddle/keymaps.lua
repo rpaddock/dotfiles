@@ -26,7 +26,10 @@ keymap.set('n', '<leader>w', ':wa<CR>', withDesc('Write all'))
 keymap.set('n', '<leader>q', ':qa<CR>', withDesc('Quit all'))
 
 -- force quit all buffers
-keymap.set('n', '<leader>fq', ':qa!<CR>', withDesc('Force quit'))
+keymap.set('n', '<leader>Q', ':qa!<CR>', withDesc('Force quit'))
+
+-- close current buffer
+keymap.set('n', '<leader>bd', ':bd<CR>', withDesc('Close buffer'))
 
 -- clear search term when centering the cursor
 keymap.set('n', 'zz', 'zz:noh<CR>', opts)

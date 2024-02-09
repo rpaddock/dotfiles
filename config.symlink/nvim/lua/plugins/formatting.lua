@@ -27,7 +27,6 @@ return {
                         return {
                             exe = 'prettierd',
                             args = { vim.api.nvim_buf_get_name(0) },
-                            try_node_modules = true,
                             stdin = true,
                         }
                     end,
@@ -38,7 +37,6 @@ return {
                         return {
                             exe = 'prettierd',
                             args = { vim.api.nvim_buf_get_name(0) },
-                            try_node_modules = true,
                             stdin = true,
                         }
                     end,
@@ -49,7 +47,6 @@ return {
                         return {
                             exe = 'prettierd',
                             args = { vim.api.nvim_buf_get_name(0) },
-                            try_node_modules = true,
                             stdin = true,
                         }
                     end,
@@ -71,7 +68,6 @@ return {
                         return {
                             exe = 'prettierd',
                             args = { vim.api.nvim_buf_get_name(0) },
-                            try_node_modules = true,
                             stdin = true,
                         }
                     end,

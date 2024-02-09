@@ -11,21 +11,23 @@ return {
             vim.keymap.set('x', '<leader>rf', ':Refactor extract_to_file ')
             vim.keymap.set('x', '<leader>rv', ':Refactor extract_var ')
             vim.keymap.set({ 'n', 'x' }, '<leader>ri', ':Refactor inline_var')
-            vim.keymap.set( 'n', '<leader>rI', ':Refactor inline_func')
+            vim.keymap.set('n', '<leader>rI', ':Refactor inline_func')
             vim.keymap.set('n', '<leader>rb', ':Refactor extract_block')
             vim.keymap.set('n', '<leader>rbf', ':Refactor extract_block_to_file')
-            vim.keymap.set({'n', 'x'}, '<leader>rr', function() require('refactoring').select_refactor() end)
+            vim.keymap.set({ 'n', 'x' }, '<leader>rr', function()
+                require('refactoring').select_refactor()
+            end)
         end,
     },
-    { -- Multi-curosr
-        'mg979/vim-visual-multi',
-        event = { 'BufReadPre', 'BufNewFile' },
-    },
+    -- { -- Multi-curosr
+    --     'mg979/vim-visual-multi',
+    --     event = { 'BufReadPre', 'BufNewFile' },
+    -- },
     { -- Additional text objects for operations
-        'wellle/targets.vim'
+        'wellle/targets.vim',
     },
     { -- Line number toggling
-        'jeffkreeftmeijer/vim-numbertoggle'
+        'jeffkreeftmeijer/vim-numbertoggle',
     },
     { -- Auto-pairs
         'windwp/nvim-autopairs',
@@ -54,14 +56,14 @@ return {
                     check_comma = true,
                     manual_position = false,
                     highlight = 'PmenuSel',
-                    highlight_grey='LineNr'
+                    highlight_grey = 'LineNr',
                 },
             })
             npairs.add_rules({
                 rule("'", "'", 'python'):with_pair(cond.before_text('f')),
                 rule('{', '}', 'python'):with_pair(cond.is_inside_quote()),
             })
-        end
+        end,
     },
     { -- Surround
         'kylechui/nvim-surround',
@@ -74,24 +76,41 @@ return {
         event = { 'BufReadPre', 'BufNewFile' },
         config = function()
             vim.g.skip_ts_context_commentstring_module = true
-            require('ts_context_commentstring').setup {
-               enable_autocmd = false,
-            }
-        end
+            require('ts_context_commentstring').setup({
+                enable_autocmd = false,
+            })
+        end,
     },
     { -- Comment
         'numToStr/Comment.nvim',
         event = { 'BufReadPre', 'BufNewFile' },
-        config = function ()
+        config = function()
             local status_ok, comment = pcall(require, 'Comment')
 
             if not status_ok then
                 return
             end
 
-            comment.setup {
+            comment.setup({
                 pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
-            }
-        end
+            })
+        end,
+    },
+    { -- Multicursor
+        'smoka7/multicursors.nvim',
+        event = 'VeryLazy',
+        dependencies = {
+            'smoka7/hydra.nvim',
+        },
+        opts = {},
+        cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
+        keys = {
+            {
+                mode = { 'v', 'n' },
+                '<Leader>m',
+                '<cmd>MCstart<cr>',
+                desc = 'Create a selection for selected text or word under the cursor',
+            },
+        },
     },
 }
