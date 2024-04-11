@@ -32,9 +32,6 @@ set -g @plugin 'dmitry-kabanov/tmux-statusline-themes'
 # set -g @plugin 'janoamaral/tokyo-night-tmux'
 # set -g @plugin 'khanghh/tmux-dark-plus-theme'
 
-# Source status line theme for tmux:
-source-file ~/.dotfiles/tmux/tmux-kanagawa-dark.conf
-
 # Enable mouse support
 set -g mouse on
 
@@ -65,3 +62,6 @@ bind-key M split-window -h 'nvim ~/.tmux.conf'
 
 # Update plugins
 run '~/.tmux/plugins/tpm/tpm'
+
+# Source status line theme for tmux:
+source-file ~/.dotfiles/tmux/tmux-kanagawa-dark.conf
