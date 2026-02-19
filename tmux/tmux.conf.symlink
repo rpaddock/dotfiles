@@ -28,7 +28,7 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
-set -g @plugin 'dmitry-kabanov/tmux-statusline-themes'
+set -g @plugin 'Nybkox/tmux-ukiyo'
 # set -g @plugin 'janoamaral/tokyo-night-tmux'
 # set -g @plugin 'khanghh/tmux-dark-plus-theme'
 
@@ -63,5 +63,13 @@ bind-key M split-window -h 'nvim ~/.tmux.conf'
 # Update plugins
 run '~/.tmux/plugins/tpm/tpm'
 
-# Source status line theme for tmux:
-source-file ~/.dotfiles/tmux/tmux-kanagawa-dark.conf
+# Kanagawa theme
+set -g @ukiyo-theme "kanagawa/wave"
+set -g @ukiyo-ignore-window-colors true
+set -g window-active-style "fg=default,bg=default"
+set -g window-style "fg=default,bg=default"
+set -g @ukiyo-show-location false
+set -g @ukiyo-show-powerline true
+
+# Clear status right
+set -g status-right ""

@@ -87,7 +87,7 @@ slate.bindAll({
         e: $.focus('Obsidian'),
         r: $.focus('Spotify'),
         a: $.focus('Airmail'),
-        s: $.focus('Code'),
+        s: $.focus('Cursor'),
         d: $.focus('Obsidian'),
         f: $.focus('Figma'),
         

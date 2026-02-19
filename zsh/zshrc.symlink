@@ -44,9 +44,10 @@ unsetopt correct_all
 unsetopt correct
 
 # terminal tools that don't warrent their own directory
-. /usr/local/etc/profile.d/z.sh
+. /opt/homebrew/Cellar/z/1.12/etc/profile.d/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH="$HOME/.local/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform

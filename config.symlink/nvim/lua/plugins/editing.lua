@@ -19,10 +19,6 @@ return {
             end)
         end,
     },
-    -- { -- Multi-curosr
-    --     'mg979/vim-visual-multi',
-    --     event = { 'BufReadPre', 'BufNewFile' },
-    -- },
     { -- Additional text objects for operations
         'wellle/targets.vim',
     },
@@ -95,22 +91,5 @@ return {
                 pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
             })
         end,
-    },
-    { -- Multicursor
-        'smoka7/multicursors.nvim',
-        event = 'VeryLazy',
-        dependencies = {
-            'smoka7/hydra.nvim',
-        },
-        opts = {},
-        cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
-        keys = {
-            {
-                mode = { 'v', 'n' },
-                '<Leader>m',
-                '<cmd>MCstart<cr>',
-                desc = 'Create a selection for selected text or word under the cursor',
-            },
-        },
     },
 }

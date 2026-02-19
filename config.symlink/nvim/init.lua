@@ -1,5 +1,2 @@
-require('puddle.options')
-require('puddle.highlights')
-require('puddle.keymaps')
-require('puddle.lazy')
-require('puddle.colorscheme')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
